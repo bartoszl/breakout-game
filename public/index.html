@@ -1,0 +1,94 @@
+<!doctype html>
+<!--
+Author: Bartosz Lewandowski
+Reg. No: 201301372
+
+Currency Converter
+CS317 -  Mobile App Development
+University of Strathclyde
+2016-2017
+ -->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Breakout">
+    <meta name="mobile-web-app-title" content="Breakout">
+    <meta name="format-detection" content="telephone=no">
+    <!-- styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- icons -->
+    <!--
+    <link href="./img/apple-touch-icon.jpeg" rel="apple-touch-icon" />
+    <link href="./img/apple-touch-icon-152x152.jpeg" rel="apple-touch-icon" sizes="152x152" />
+    <link href="./img/apple-touch-icon-167x167.jpeg" rel="apple-touch-icon" sizes="167x167" />
+    <link href="./img/apple-touch-icon-180x180.jpeg" rel="apple-touch-icon" sizes="180x180" />
+    <link href="./img/icon-hires.jpeg" rel="icon" sizes="192x192" />
+    <link href="./img/icon-normal.jpeg" rel="icon" sizes="128x128" />
+    -->
+
+  </head>
+  <body>
+    <header>
+      <h3 id="score"> Score: <span id="score-count">0</span> </h3>
+    </header>
+    <main>
+      <div id="nav" class="menu">
+        <div class="menu-content">
+            <hr />
+            <h2> Select Game Mode </h2>
+            <hr />
+            <p class="menu-item" id="select-single"> Single Player </p>
+            <p class="menu-item" id="select-two"> Multi Player </p>
+        </div>
+      </div>
+      <canvas id="canv" height="90vh"> Hey im a canvas</canvas>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h2 class="modal-item"><i>Game Paused</i></h2>
+          <hr />
+          <p class="modal-item" id="pause-continue"> Continue </p>
+          <p class="modal-item" id="pause-restart"> Restart </p>
+          <p class="modal-item" id="pause-menu"> Go back to Menu </p>
+        </div>
+      </div>
+
+      <div id="game-over" class="modal">
+        <div class="modal-content">
+          <h2 class="modal-item"><i>Game Over :(</i></h2>
+          <hr />
+          <p class="modal-item" id="play-again"> Play Again </p>
+          <p class="modal-item" id="over-menu"> Go back to Menu </p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- MVC app -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/app/physics/BasicPhysics.js"></script>
+
+    <script src="/app/views/PaddleView.js" ></script>
+    <script src="/app/models/PaddleModel.js" ></script>
+    <script src="/app/controllers/PaddleController.js" ></script>
+
+    <script src="/app/views/BallView.js" ></script>
+    <script src="/app/models/BallModel.js" ></script>
+    <script src="/app/controllers/BallController.js" ></script>
+
+    <script src="/app/views/BrickView.js" ></script>
+    <script src="/app/models/BrickModel.js"></script>
+    <script src="/app/controllers/BrickController.js"></script>
+
+    <script src="/app/models/GameModel.js" ></script>
+    <script src="/app/views/GameView.js" ></script>
+    <script src="/app/controllers/GameController.js"></script>
+
+  </body>
+</html>
