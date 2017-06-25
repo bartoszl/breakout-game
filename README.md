@@ -1,4 +1,4 @@
-# breakout-game ( CS317 Project, University of Strathclyde, Glasgow )
+# Breakout
 Breakout game mobile app written in plain JavaScript and Canvas graphics. Multiplayer mode was implemented using socket.io library.
 
 ## See the game in action!
